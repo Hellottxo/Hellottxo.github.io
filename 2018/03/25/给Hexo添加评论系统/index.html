@@ -87,14 +87,14 @@
 <meta property="og:site_name" content="Hello World">
 <meta property="og:description" content="搭建完Hexo博客后，为了增强博客与浏览者的互动，我们可以为Hexo博客添加一个评论系统。之前大家常用的多说已经挂掉了，这次我们采用Valine，Valine是基于 leancloud的评论系统，配置简单，页面简洁，支持MD。首先，我们需要leancloud账号注册,注册完毕后点击创建应用，选择开发版，应用名称就取决于你自己啦。以上步骤完成后我们点进已经创建的应用设置中获取appid和appkey">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://photo.weibo.com/1909491811/wbphotos/large/photo_id/4221498718147024/album_id/3568221625161660">
-<meta property="og:image" content="http://photo.weibo.com/1909491811/wbphotos/large/mid/4221498719324166/pid/71d08863gy1fpp5j931rzj20w10ef3yt">
-<meta property="og:image" content="http://photo.weibo.com/1909491811/wbphotos/large/mid/4221498719324166/pid/71d08863gy1fpp5j8use4j20qh0jiq4d">
-<meta property="og:updated_time" content="2018-03-25T08:54:16.382Z">
+<meta property="og:image" content="https://github.com/Hellottxo/markdownimg/blob/master/3.1.png?raw=true">
+<meta property="og:image" content="https://github.com/Hellottxo/markdownimg/blob/master/3.2.png?raw=true">
+<meta property="og:image" content="https://github.com/Hellottxo/markdownimg/blob/master/3.3.png?raw=true">
+<meta property="og:updated_time" content="2018-03-25T09:57:27.899Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="给Hexo添加评论系统">
 <meta name="twitter:description" content="搭建完Hexo博客后，为了增强博客与浏览者的互动，我们可以为Hexo博客添加一个评论系统。之前大家常用的多说已经挂掉了，这次我们采用Valine，Valine是基于 leancloud的评论系统，配置简单，页面简洁，支持MD。首先，我们需要leancloud账号注册,注册完毕后点击创建应用，选择开发版，应用名称就取决于你自己啦。以上步骤完成后我们点进已经创建的应用设置中获取appid和appkey">
-<meta name="twitter:image" content="http://photo.weibo.com/1909491811/wbphotos/large/photo_id/4221498718147024/album_id/3568221625161660">
+<meta name="twitter:image" content="https://github.com/Hellottxo/markdownimg/blob/master/3.1.png?raw=true">
 
 
 
@@ -324,8 +324,7 @@
       
 
       
-        <p>搭建完Hexo博客后，为了增强博客与浏览者的互动，我们可以为Hexo博客添加一个评论系统。之前大家常用的多说已经挂掉了，这次我们采用<code>Valine</code>，<code>Valine</code>是基于 <code>leancloud</code>的评论系统，配置简单，页面简洁，支持MD。<br>首先，我们需要<a href="https://leancloud.cn/" target="_blank" rel="noopener">leancloud账号注册</a>,注册完毕后点击创建应用，选择开发版，应用名称就取决于你自己啦。<br>以上步骤完成后我们点进已经创建的应用设置中获取<code>appid</code>和<code>appkey</code>，同时将安全中心的<code>Web安全域名</code>设置为自己的域名。<br><img src="http://photo.weibo.com/1909491811/wbphotos/large/photo_id/4221498718147024/album_id/3568221625161660" alt="img"><br><img src="http://photo.weibo.com/1909491811/wbphotos/large/mid/4221498719324166/pid/71d08863gy1fpp5j931rzj20w10ef3yt" alt="img"><br><img src="http://photo.weibo.com/1909491811/wbphotos/large/mid/4221498719324166/pid/71d08863gy1fpp5j8use4j20qh0jiq4d" alt="img"></p>
-<h3 id="得到appid和appkey后，进入主题设置文件，添加以下代码，或者将相关代码修改如下。注释部分可以忽略"><a href="#得到appid和appkey后，进入主题设置文件，添加以下代码，或者将相关代码修改如下。注释部分可以忽略" class="headerlink" title="得到appid和appkey后，进入主题设置文件，添加以下代码，或者将相关代码修改如下。注释部分可以忽略"></a>得到<code>appid</code>和<code>appkey</code>后，进入主题设置文件，添加以下代码，或者将相关代码修改如下。注释部分可以忽略</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Valine.</span></span><br><span class="line"><span class="comment"># You can get your appid and appkey from https://leancloud.cn</span></span><br><span class="line"><span class="comment"># more info please open https://valine.js.org</span></span><br><span class="line">valine:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  appid: <span class="comment">#your appid</span></span><br><span class="line">  appkey: <span class="comment">#your appkey</span></span><br><span class="line">  notify: <span class="literal">false</span> <span class="comment"># mail notifier , https://github.com/xCss/Valine/wiki</span></span><br><span class="line">  verify: <span class="literal">false</span> <span class="comment"># Verification code</span></span><br><span class="line">  placeholder: (*•̀ㅂ•́)و很高兴你能来 <span class="comment"># comment box placeholder</span></span><br><span class="line">  avatar: mm <span class="comment"># gravatar style</span></span><br><span class="line">  guest_info: nick,mail,link <span class="comment"># custom comment header</span></span><br><span class="line">  pageSize: 10 <span class="comment"># pagination size</span></span><br></pre></td></tr></table></figure>
+        <p>搭建完Hexo博客后，为了增强博客与浏览者的互动，我们可以为Hexo博客添加一个评论系统。之前大家常用的多说已经挂掉了，这次我们采用<code>Valine</code>，<code>Valine</code>是基于 <code>leancloud</code>的评论系统，配置简单，页面简洁，支持MD。<br>首先，我们需要<a href="https://leancloud.cn/" target="_blank" rel="noopener">leancloud账号注册</a>,注册完毕后点击创建应用，选择开发版，应用名称就取决于你自己啦。<br>以上步骤完成后我们点进已经创建的应用设置中获取<code>appid</code>和<code>appkey</code>，同时将安全中心的<code>Web安全域名</code>设置为自己的域名。<br><img src="https://github.com/Hellottxo/markdownimg/blob/master/3.1.png?raw=true" alt="img"><br><img src="https://github.com/Hellottxo/markdownimg/blob/master/3.2.png?raw=true" alt="img"><br><img src="https://github.com/Hellottxo/markdownimg/blob/master/3.3.png?raw=true" alt="img"><br>得到<code>appid</code>和<code>appkey</code>后，进入主题设置文件，添加以下代码，或者将相关代码修改如下。注释部分可以忽略<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Valine.</span></span><br><span class="line"><span class="comment"># You can get your appid and appkey from https://leancloud.cn</span></span><br><span class="line"><span class="comment"># more info please open https://valine.js.org</span></span><br><span class="line">valine:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  appid: <span class="comment">#your appid</span></span><br><span class="line">  appkey: <span class="comment">#your appkey</span></span><br><span class="line">  notify: <span class="literal">false</span> <span class="comment"># mail notifier , https://github.com/xCss/Valine/wiki</span></span><br><span class="line">  verify: <span class="literal">false</span> <span class="comment"># Verification code</span></span><br><span class="line">  placeholder: (*•̀ㅂ•́)و很高兴你能来 <span class="comment"># comment box placeholder</span></span><br><span class="line">  avatar: mm <span class="comment"># gravatar style</span></span><br><span class="line">  guest_info: nick,mail,link <span class="comment"># custom comment header</span></span><br><span class="line">  pageSize: 10 <span class="comment"># pagination size</span></span><br></pre></td></tr></table></figure></p>
 <p>接下来就可以愉快的留言啦！略略略 (๑•́ ₃ •̀)</p>
 
       
@@ -426,17 +425,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -498,22 +488,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#得到appid和appkey后，进入主题设置文件，添加以下代码，或者将相关代码修改如下。注释部分可以忽略"><span class="nav-number">1.</span> <span class="nav-text">得到appid和appkey后，进入主题设置文件，添加以下代码，或者将相关代码修改如下。注释部分可以忽略</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
